@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+i {
+    pointer-events: none;
+}
+
+// 置中
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(90deg, #a8f1f1, #00FF7F);
+}
+
+header {
+    @include center;
+    height: 20vh;
+
+    h1 {
+        letter-spacing: 3px;
+        font-size: 40px;
+    }
+}
+
+form {
+    @include center;
+
+    input,
+    button {
+        border: none;
+        margin: 5px;
+        padding: 10px;
+        font-size: 26px;
+        border-radius: 10px;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        text-align: center;
+
+    }
+
+    button {
+        background-color: #1dc4f2;
+    }
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+// 清單區
+.toDoList {
+    margin-bottom: 10px;
+    @include center;
+
+    p {
+        background-color: white;
+        padding: 12px;
+        font-size: 26px;
+        width: 80px;
+        height: 55px;
+    }
+
+    p:first-child {
+        border-radius: 10px 0 0 10px;
+        width: 300px;
+    }
+
+    p:last-child {
+        border-radius: 0 10px 10px 0;
+
+    }
+
+    button {
+        height: 55px;
+        width: 55px;
+        border: none;
+        font-size: 26px;
+        cursor: pointer;
+        color: white;
+    }
+
+    button.trash {
+        background-color: red;
+    }
+
+    button.complete {
+        background-color: rgb(61, 241, 37);
+    }
+}
+
+// 清單確定按鈕時執行透明跟文字刪除線
+div.done {
+    transition: all 0.5s ease;
+    opacity: 0.3;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.3rem;
+    text-decoration-color: red;
+
+}
+
+// 清單出現時的動畫
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    to {
+        transform: scale(0);
+    }
+}
+
+div.sort {
+    @include center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    button{
+        height: 55px;
+        width: 100px;
+        border: none;
+        font-size: 26px;
+        cursor: pointer;
+        background-color: #1dc4f2;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+}

@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background: linear-gradient(90deg, #a8f1f1, #00FF7F);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+header h1 {
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  font-size: 26px;
+  border-radius: 10px;
+}
+form input[type=number] {
+  width: 50px;
+  text-align: center;
+}
+form button {
+  background-color: #1dc4f2;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.toDoList {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toDoList p {
+  background-color: white;
+  padding: 12px;
+  font-size: 26px;
+  width: 80px;
+  height: 55px;
+}
+.toDoList p:first-child {
+  border-radius: 10px 0 0 10px;
+  width: 300px;
+}
+.toDoList p:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.toDoList button {
+  height: 55px;
+  width: 55px;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+.toDoList button.trash {
+  background-color: red;
+}
+.toDoList button.complete {
+  background-color: rgb(61, 241, 37);
+}
+
+div.done {
+  transition: all 0.5s ease;
+  opacity: 0.3;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.3rem;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+div.sort button {
+  height: 55px;
+  width: 100px;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  background-color: #1dc4f2;
+  border-radius: 10px;
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */
